@@ -19,4 +19,4 @@ const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey, {
   }
 });
 
-export default supabase;
+export default null;
