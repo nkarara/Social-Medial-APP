@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -49,7 +48,8 @@ export const useNotifications = () => {
       // Fetch profiles for notifications where we only have reference_id
       const enhancedNotifications = await Promise.all(
         data.map(async (notification) => {
-          if (notification.type === 'follow' && !notification.profiles) {
+          if (notification.type === 'follow') {
+            // For follow notifications, the reference_id is the follower's ID
             const profile = await profilesService.fetchProfile(notification.reference_id);
             return { ...notification, profiles: profile };
           }
@@ -96,6 +96,7 @@ export const useNotifications = () => {
         navigate(`/post/${notification.reference_id}`);
         break;
       case 'follow':
+        // For follow notifications, navigate to the follower's profile
         navigate(`/profile/${notification.reference_id}`);
         break;
     }

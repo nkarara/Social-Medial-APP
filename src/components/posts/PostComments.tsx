@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -14,10 +13,18 @@ interface PostCommentsProps {
   commentsCount: number;
   user: User | null;
   onCommentUpdate: () => void;
+  isCommenting: boolean;
+  onCommentingChange: (isCommenting: boolean) => void;
 }
 
-const PostComments = ({ postId, commentsCount, user, onCommentUpdate }: PostCommentsProps) => {
-  const [isCommenting, setIsCommenting] = useState(false);
+const PostComments = ({ 
+  postId, 
+  commentsCount, 
+  user, 
+  onCommentUpdate,
+  isCommenting,
+  onCommentingChange 
+}: PostCommentsProps) => {
   const [commentText, setCommentText] = useState('');
   const [comments, setComments] = useState<CommentWithProfile[]>([]);
   const [showComments, setShowComments] = useState(false);
@@ -36,14 +43,18 @@ const PostComments = ({ postId, commentsCount, user, onCommentUpdate }: PostComm
     
     setIsSubmitting(true);
     try {
-      const newComment = await commentsService.addComment(postId, user.id, commentText.trim());
+      const newComment = await commentsService.addComment(
+        postId, 
+        user.id, 
+        commentText.trim()
+      );
       
       if (newComment) {
         // Fetch complete comment with profile info
         const updatedComments = await commentsService.fetchComments(postId);
         setComments(updatedComments);
         setCommentText('');
-        setIsCommenting(false);
+        onCommentingChange(false);
         onCommentUpdate();
       }
     } catch (error) {
@@ -77,7 +88,17 @@ const PostComments = ({ postId, commentsCount, user, onCommentUpdate }: PostComm
               onChange={(e) => setCommentText(e.target.value)}
               className="min-h-[60px]"
             />
-            <div className="flex justify-end">
+            
+            <div className="flex justify-end space-x-2">
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={() => {
+                  onCommentingChange(false);
+                }}
+              >
+                Cancel
+              </Button>
               <Button
                 size="sm"
                 onClick={handleAddComment}

@@ -1,0 +1,184 @@
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/[1;31msupabase[m-js": "^2.49.4",
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/auth-js": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/auth-js/-/auth-js-2.69.1.tgz",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/node-fetch": "^2.6.14"
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/functions-js": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/functions-js/-/functions-js-2.4.4.tgz",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/node-fetch": "^2.6.14"
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/node-fetch": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/node-fetch/-/node-fetch-2.6.15.tgz",
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/postgrest-js": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/postgrest-js/-/postgrest-js-1.19.4.tgz",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/node-fetch": "^2.6.14"
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/realtime-js": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/realtime-js/-/realtime-js-2.11.2.tgz",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/node-fetch": "^2.6.14",
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/storage-js": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/storage-js/-/storage-js-2.7.1.tgz",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/node-fetch": "^2.6.14"
+[35mpackage-lock.json[m[36m:[m    "node_modules/@[1;31msupabase[m/[1;31msupabase[m-js": {
+[35mpackage-lock.json[m[36m:[m      "resolved": "https://registry.npmjs.org/@[1;31msupabase[m/[1;31msupabase[m-js/-/[1;31msupabase[m-js-2.49.4.tgz",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/auth-js": "2.69.1",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/functions-js": "2.4.4",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/node-fetch": "2.6.15",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/postgrest-js": "1.19.4",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/realtime-js": "2.11.2",
+[35mpackage-lock.json[m[36m:[m        "@[1;31msupabase[m/storage-js": "2.7.1"
+[35mpackage.json[m[36m:[m    "@[1;31msupabase[m/[1;31msupabase[m-js": "^2.49.4",
+[35msrc/components/admin/PostManagement.tsx[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/components/admin/UserManagement.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m    const { data: usersData, error: usersError } = await [1;31msupabase[m
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m    const { count: postsCount, error: postsCountError } = await [1;31msupabase[m
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m    const { count: commentsCount, error: commentsCountError } = await [1;31msupabase[m
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m      const { count: dayPostsCount, error: dayPostsError } = await [1;31msupabase[m
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m      const { count: dayCommentsCount, error: dayCommentsError } = await [1;31msupabase[m
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m    const { data: followData, error: followError } = await [1;31msupabase[m
+[35msrc/components/admin/analytics/analyticsService.ts[m[36m:[m    const { data: topUserProfiles, error: topUserError } = await [1;31msupabase[m
+[35msrc/components/admin/user-management/UserCard.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/admin/user-management/userService.ts[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/auth/ForgotPasswordForm.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/components/auth/ForgotPasswordForm.tsx[m[36m:[m      const { error } = await [1;31msupabase[m.auth.resetPasswordForEmail(email, {
+[35msrc/components/auth/LoginForm.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/components/auth/LoginForm.tsx[m[36m:[m      const { data, error } = await [1;31msupabase[m.auth.signInWithPassword({
+[35msrc/components/auth/RegisterForm.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/components/auth/RegisterForm.tsx[m[36m:[m      const { error } = await [1;31msupabase[m.auth.signUp({
+[35msrc/components/auth/ResetPasswordForm.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/components/auth/ResetPasswordForm.tsx[m[36m:[m      const { data, error } = await [1;31msupabase[m.auth.getSession();
+[35msrc/components/auth/ResetPasswordForm.tsx[m[36m:[m      const { error } = await [1;31msupabase[m.auth.updateUser({
+[35msrc/components/layout/navbar/SearchBar.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/notifications/NotificationItem.tsx[m[36m:[mimport { NotificationWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/components/posts/PostActions.tsx[m[36m:[mimport { User } from '@[1;31msupabase[m/[1;31msupabase[m-js';
+[35msrc/components/posts/PostCard.tsx[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/components/posts/PostComments.tsx[m[36m:[mimport { CommentWithProfile } from '@/types/[1;31msupabase[m';
+[35msrc/components/posts/PostComments.tsx[m[36m:[mimport { User } from '@[1;31msupabase[m/[1;31msupabase[m-js';
+[35msrc/components/posts/PostHeader.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/posts/PostsList.tsx[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/components/profile/ConnectionsList.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/profile/EditProfileForm.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/profile/ProfileHeader.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/components/profile/ProfileStats.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/contexts/AuthContext.tsx[m[36m:[mimport { Session, User } from '@[1;31msupabase[m/[1;31msupabase[m-js';
+[35msrc/contexts/AuthContext.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/contexts/AuthContext.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { data: { session }, error: sessionError } = await [1;31msupabase[m.auth.getSession();
+[35msrc/contexts/AuthContext.tsx[m[36m:[m    const { data: { subscription } } = [1;31msupabase[m.auth.onAuthStateChange(
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { data, error } = await [1;31msupabase[m.auth.signUp({
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { error } = await [1;31msupabase[m.auth.signInWithPassword({
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { error } = await [1;31msupabase[m.auth.signOut();
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { error } = await [1;31msupabase[m.auth.resetPasswordForEmail(email, {
+[35msrc/contexts/AuthContext.tsx[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/hooks/useNotifications.ts[m[36m:[mimport { NotificationWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/integrations/supabase/client.ts[m[36m:[mimport { createClient } from '@[1;31msupabase[m/[1;31msupabase[m-js';
+[35msrc/integrations/supabase/client.ts[m[36m:[mconst SUPABASE_URL = "https://ptkdbfatsnhtbwnzwwqv.[1;31msupabase[m.co";
+[35msrc/integrations/supabase/client.ts[m[36m:[m// Import the [1;31msupabase[m client like this:
+[35msrc/integrations/supabase/client.ts[m[36m:[m// import { [1;31msupabase[m } from "@/integrations/[1;31msupabase[m/client";
+[35msrc/integrations/supabase/client.ts[m[36m:[mexport const [1;31msupabase[m = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+[35msrc/lib/supabase.ts[m[36m:[mimport { createClient } from '@[1;31msupabase[m/[1;31msupabase[m-js';
+[35msrc/lib/supabase.ts[m[36m:[mimport type { Database } from '@/integrations/[1;31msupabase[m/types';
+[35msrc/lib/supabase.ts[m[36m:[mconst [1;31msupabase[mUrl = "https://rrcufwvcsnebllgjhtvi.[1;31msupabase[m.co";
+[35msrc/lib/supabase.ts[m[36m:[mconst [1;31msupabase[mAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyY3Vmd3Zjc25lYmxsZ2podHZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY3MjI5MDIsImV4cCI6MjA2MjI5ODkwMn0.BNt9o3XDtSoki9Fd4F1g9NLdFjI9kfDheRwXf_UXqXw";
+[35msrc/lib/supabase.ts[m[36m:[mconst [1;31msupabase[m = createClient<Database>([1;31msupabase[mUrl, [1;31msupabase[mAnonKey, {
+[35msrc/lib/supabase.ts[m[36m:[mexport default [1;31msupabase[m;
+[35msrc/pages/BookmarksPage.tsx[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/pages/ExplorePage.tsx[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/pages/FollowersPage.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/pages/FollowersPage.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/pages/FollowersPage.tsx[m[36m:[m        const { data, error } = await [1;31msupabase[m
+[35msrc/pages/FollowingPage.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/pages/FollowingPage.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/pages/FollowingPage.tsx[m[36m:[m        const { data, error } = await [1;31msupabase[m
+[35msrc/pages/MessagesPage.tsx[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/pages/MessagesPage.tsx[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/pages/MessagesPage.tsx[m[36m:[m    const messagesChannel = [1;31msupabase[m
+[35msrc/pages/MessagesPage.tsx[m[36m:[m      [1;31msupabase[m.removeChannel(messagesChannel);
+[35msrc/pages/NotificationsPage.tsx[m[36m:[mimport { NotificationWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/pages/PostPage.tsx[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/pages/ProfilePage.tsx[m[36m:[mimport { Profile, PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/avatarService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/avatarService.ts[m[36m:[m      const { error: uploadError } = await [1;31msupabase[m.storage
+[35msrc/services/avatarService.ts[m[36m:[m      const { data } = [1;31msupabase[m.storage
+[35msrc/services/avatarService.ts[m[36m:[m      const { error: updateError } = await [1;31msupabase[m
+[35msrc/services/avatarService.ts[m[36m:[m      const { error: updateError } = await [1;31msupabase[m
+[35msrc/services/avatarService.ts[m[36m:[m        await [1;31msupabase[m.storage
+[35msrc/services/bookmarksService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/bookmarksService.ts[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/bookmarksService.ts[m[36m:[m      const { data: existingBookmark, error: checkError } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m        const { error } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m        const { error } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m      const { data: bookmarks, error: bookmarksError } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m      const { data: posts, error: postsError } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m          const { count: likesCount, error: likesError } = await [1;31msupabase[m
+[35msrc/services/bookmarksService.ts[m[36m:[m          const { count: commentsCount, error: commentsError } = await [1;31msupabase[m
+[35msrc/services/commentsService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/commentsService.ts[m[36m:[mimport { Comment, CommentWithProfile } from '@/types/[1;31msupabase[m';
+[35msrc/services/commentsService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/commentsService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/commentsService.ts[m[36m:[m      const { data: post } = await [1;31msupabase[m
+[35msrc/services/commentsService.ts[m[36m:[m        await [1;31msupabase[m
+[35msrc/services/commentsService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/messagesService.ts[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/services/messagesService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/messagesService.ts[m[36m:[m      const { data: messages, error } = await [1;31msupabase[m
+[35msrc/services/messagesService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/messagesService.ts[m[36m:[m        const { error: updateError } = await [1;31msupabase[m
+[35msrc/services/messagesService.ts[m[36m:[m      const { data: follows, error: followsError } = await [1;31msupabase[m
+[35msrc/services/messagesService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/notificationsService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/notificationsService.ts[m[36m:[mimport { NotificationWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/notificationsService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/notificationsService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/notificationsService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/notificationsService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/postCrudService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/postCrudService.ts[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/postCrudService.ts[m[36m:[m        const { error: uploadError } = await [1;31msupabase[m.storage
+[35msrc/services/postCrudService.ts[m[36m:[m        const { data: publicUrlData } = [1;31msupabase[m.storage
+[35msrc/services/postCrudService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/postCrudService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/postFetchService.ts[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/postFetchService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m        const { count: likesCount } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m        const { count: commentsCount } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m          const { data: likeData } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m        const { count: likesCount } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m        const { count: commentsCount } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m          const { data: likeData } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m      const { count: likesCount } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m      const { count: commentsCount } = await [1;31msupabase[m
+[35msrc/services/postFetchService.ts[m[36m:[m        const { data: likeData } = await [1;31msupabase[m
+[35msrc/services/postLikeService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/postLikeService.ts[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/postLikeService.ts[m[36m:[m  const { data: likes } = await [1;31msupabase[m
+[35msrc/services/postLikeService.ts[m[36m:[m    const { data: existingLike, error: checkError } = await [1;31msupabase[m
+[35msrc/services/postLikeService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/postLikeService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/postLikeService.ts[m[36m:[m      const { data: post } = await [1;31msupabase[m
+[35msrc/services/postLikeService.ts[m[36m:[m        await [1;31msupabase[m
+[35msrc/services/postSearchService.ts[m[36m:[mimport { PostWithDetails } from '@/types/[1;31msupabase[m';
+[35msrc/services/postsService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/postsService.ts[m[36m:[m    const { error } = await [1;31msupabase[m
+[35msrc/services/profileService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/profileService.ts[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/services/profileService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/profileService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/profileService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/profileService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m.auth.getUser();
+[35msrc/services/profileService.ts[m[36m:[m      const { data: userData, error } = await [1;31msupabase[m.auth.getUser();
+[35msrc/services/profileService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/profileService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/profileService.ts[m[36m:[m      const { error } = await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[mimport [1;31msupabase[m from '@/lib/[1;31msupabase[m';
+[35msrc/services/socialService.ts[m[36m:[mimport { Profile } from '@/types/[1;31msupabase[m';
+[35msrc/services/socialService.ts[m[36m:[m      const { data: existingFollow, error: checkError } = await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[m        const { error } = await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[m        const { error } = await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[m        await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m
+[35msrc/services/socialService.ts[m[36m:[m      const { data, error } = await [1;31msupabase[m

@@ -1,8 +1,8 @@
-
 import { formatDistanceToNow } from 'date-fns';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Heart, MessageSquare, UserPlus } from 'lucide-react';
 import { NotificationWithDetails } from '@/types/supabase';
+import { Link } from 'react-router-dom';
 
 interface NotificationItemProps {
   notification: NotificationWithDetails;
@@ -22,7 +22,9 @@ const NotificationItem = ({ notification, onClick }: NotificationItemProps) => {
             </div>
             <div className="flex-1">
               <p>
-                <span className="font-medium">{notification.profiles?.username}</span>{' '}
+                <Link to={`/profile/${notification.profiles?.id}`} className="font-medium hover:underline">
+                  {notification.profiles?.username}
+                </Link>{' '}
                 liked your post{' '}
                 <span className="text-muted-foreground">{timeAgo}</span>
               </p>
@@ -38,7 +40,9 @@ const NotificationItem = ({ notification, onClick }: NotificationItemProps) => {
             </div>
             <div className="flex-1">
               <p>
-                <span className="font-medium">{notification.profiles?.username}</span>{' '}
+                <Link to={`/profile/${notification.profiles?.id}`} className="font-medium hover:underline">
+                  {notification.profiles?.username}
+                </Link>{' '}
                 commented on your post{' '}
                 <span className="text-muted-foreground">{timeAgo}</span>
               </p>
@@ -54,7 +58,9 @@ const NotificationItem = ({ notification, onClick }: NotificationItemProps) => {
             </div>
             <div className="flex-1">
               <p>
-                <span className="font-medium">{notification.profiles?.username}</span>{' '}
+                <Link to={`/profile/${notification.reference_id}`} className="font-medium hover:underline">
+                  {notification.profiles?.username}
+                </Link>{' '}
                 started following you{' '}
                 <span className="text-muted-foreground">{timeAgo}</span>
               </p>

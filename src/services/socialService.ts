@@ -1,4 +1,3 @@
-
 import supabase from '@/lib/supabase';
 import { Profile } from '@/types/supabase';
 import { toast } from '@/components/ui/use-toast';

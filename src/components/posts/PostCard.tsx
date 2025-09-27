@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,6 +18,7 @@ const PostCard = ({ post, onPostUpdate }: PostCardProps) => {
   const { user } = useAuth();
   const [isLiked, setIsLiked] = useState(post.user_has_liked || false);
   const [isBookmarked, setIsBookmarked] = useState(post.is_bookmarked || false);
+  const [isCommenting, setIsCommenting] = useState(false);
   
   // Extract actual count from the likes_count and comments_count
   const extractCount = (countData: number | { count: number } | { count: number }[]): number => {
@@ -35,7 +35,6 @@ const PostCard = ({ post, onPostUpdate }: PostCardProps) => {
   const commentsCountValue = extractCount(post.comments_count);
   
   const [likesCount, setLikesCount] = useState(likesCountValue);
-  const [isCommenting, setIsCommenting] = useState(false);
   
   const handleLikeChange = (newLiked: boolean, newCount: number) => {
     setIsLiked(newLiked);
@@ -111,6 +110,8 @@ const PostCard = ({ post, onPostUpdate }: PostCardProps) => {
           onCommentUpdate={() => {
             if (onPostUpdate) onPostUpdate();
           }}
+          isCommenting={isCommenting}
+          onCommentingChange={setIsCommenting}
         />
       </CardFooter>
     </Card>
